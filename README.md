@@ -1,23 +1,28 @@
-# University_Ranking_Success_Analysis
-University Success Analytics
-Overview:
+**University Success Analytics**
+**Overview:**
 The University Success Analytics project is an in-depth exploration of higher education trends, leveraging data analytics tools such as Power BI, SQL, and Excel. By integrating a structured dataset with MECE analysis and interactive Power BI visualizations, this study offers a holistic perspective on the key factors driving university success. The project aims to provide data-driven insights into rankings, demographics, and institutional performance, supporting informed decision-making in the academic sector. Interactive visualizations and dashboards help users explore university rankings, understand demographic trends, and assess institutional performance over time.
-Summary:
+
+**Summary:**
 This project delves into the complex landscape of higher education, using advanced data analytics to uncover meaningful patterns and trends. Through Power BI dashboards, SQL queries, and Excel-based analyses, the study examines university rankings, student demographics, and performance metrics across different countries and over time. By identifying key factors influencing academic excellence, the project enhances the understanding of institutional success and supports strategic decision-making in higher education.
-Significance
+
+**Significance**
 This project is essential for stakeholders in higher education because it enables them to:
 •	Monitor Key Performance Indicators (KPIs): Track metrics such as ranking scores, student-to-staff ratios, international and female student enrollment, and research outputs.
 •	Analyze Global and Regional Trends: Gain insights into how universities perform across different regions and how ranking criteria evolve over time.
 •	Benchmark Institutional Performance: Compare universities across various ranking systems (e.g., Times Higher Education, Shanghai Ranking, CWUR) to identify strengths and areas for improvement.
 •	Drive Data-Driven Decisions: Leverage detailed visualizations and analytical insights to inform strategic planning, policy-making, and investment in higher education.
+
 Getting Started
-Prerequisites
+
+**Prerequisites**
 •	Microsoft Excel (2016 or later)
 •	Power BI Desktop ( for advanced interactive dashboards)
 •	SQL Server or an equivalent relational database (optional, for data extraction and analysis)
 •	Basic knowledge of Excel formulas, SQL queries, and Power BI visualizations.
-Data Sheets Overview
+
+**Data Sheets Overview**
 The dataset is structured into six interrelated tables, each providing distinct insights:
+
 1. Country Table
 •	Purpose: Provides essential geographic context for the analysis.
 •	Key Attributes:
@@ -56,42 +61,56 @@ o	University ID: Unique identifier for each university.
 o	Ranking Criteria ID: Identifier for the ranking criterion used.
 o	Year: The year in which the ranking was recorded.
 o	Score: The score achieved by the university based on the specified criterion.
-Steps to Create the Dashboard
-1. Data Preparation
+
+**Steps to Create the Dashboard**
+**1. Data Preparation**
 •	Country & University Data: Import and clean data from the Country and University tables to ensure proper linking.
 •	Ranking Data: Import ranking scores and criteria data, ensuring consistency across different ranking systems.
 •	Yearly Metrics: Consolidate the University Year data to capture trends in enrollment and student-faculty ratios.
 2. Loading CSV Data for SQL
-•	CSV Import:
+
+**•	CSV Import:**
 o	Open your SQL management tool (e.g., SQL Server Management Studio).
 o	Use the built-in import wizard to load CSV files into corresponding SQL tables.
 o	Ensure that columns match the schema described in the Data Sheets Overview.
 o	For example, load the Country.csv, University.csv, etc., into your database to facilitate further SQL queries.
-3. SQL Queries for KPI Extraction
+
+**3. SQL Queries for KPI Extraction**
 •	Use SQL queries to extract key metrics such as average ranking scores, student-to-staff ratios, and demographic trends.
 •	Create views or stored procedures as needed to summarize data for further analysis.
-4. Importing SQL Data into Power BI
+
+**4. Importing SQL Data into Power BI**
 •	Connecting Power BI to SQL:
 o	Open Power BI Desktop and select “Get Data” → “SQL Server.”
 o	Enter your server name and database details to establish a connection.
 o	Import the relevant tables or SQL views created earlier.
 o	Use Power BI’s query editor to refine and model the data before building dashboards.
-5. Define Key Performance Indicators (KPIs)
+
+**5. Define Key Performance Indicators (KPIs)**
+   
 •	Calculate KPIs such as average ranking score, student-to-staff ratio, percentage of international and female students, and overall student enrollment.
 •	Use pivot tables, formulas, and SQL queries (if applicable) to summarize these metrics.
-6. Build Visualizations
+
+**6. Build Visualizations**
+   
 •	Ranking Analysis: Create charts to compare ranking scores across systems and over time.
 •	Demographic Trends: Develop visualizations to examine changes in student demographics (international, female, total enrollment).
 •	Regional & Global Insights: Use map visualizations to display the distribution of universities and assess regional performance.
 •	Correlation Analysis: Illustrate relationships between KPIs (e.g., ranking scores vs. student-to-staff ratios) using scatter plots and trend lines.
-7. Enhance Interactivity
+
+**7. Enhance Interactivity**
+   
 •	Implement slicers and filters to enable dynamic exploration of the data.
 •	Create dashboards with interactive elements that allow users to drill down into specific data points (e.g., by year, country, or ranking system).
-8. Finalize and Publish
+
+**8. Finalize and Publish**
+   
 •	Review the dashboards and reports for accuracy and clarity.
 •	Save and publish the final Excel and Power BI files to share with stakeholders or deploy them for ongoing analysis.
 
-Relationships Between Tables: University Ranking Dataset
+**Relationships Between Tables:** 
+
+University Ranking Dataset
 The dataset is structured as a relational database, where key relationships exist between tables:
 •	Country Table → University Table (One-to-Many): Each country has multiple universities.
 •	University Table → University Year Table (One-to-Many): Each university has yearly demographic and student-related data.
@@ -99,93 +118,141 @@ The dataset is structured as a relational database, where key relationships exis
 •	Ranking Criteria Table → University Ranking Table (One-to-Many): Each ranking criterion is used to assess universities.
 •	University Table → University Ranking Table (One-to-Many): Each university is ranked based on different criteria.
 This structured data model ensures efficient data exploration, making it easier to analyze global university performance, ranking trends, and institutional demographics.
-Entity Relationship (ER) Diagram:
- 
-Exploratory Data Analysis: 
-Problem Statement 1: How has the number of universities changed over the years in each country?
- 
+
+**Entity Relationship (ER) Diagram:**
+
+ ![image](https://github.com/user-attachments/assets/c017c55a-3d15-40e7-b966-dd1c15371990)
+
+******Exploratory Data Analysis**: **
+**Problem Statement 1: How has the number of universities changed over the years in each country?****
+
+ ![image](https://github.com/user-attachments/assets/e12a8589-55e0-458e-82db-db49a971ffc4)
+
 •	The total number of ranked universities increased steadily from 185 in 2011 to 199 in 2015 but dropped to 110 in 2016, suggesting a possible change in ranking methodology.
 •	The United States dominated rankings, peaking at 77 universities in 2015 before dropping to 36 in 2016.
 •	The UK maintained a steady presence (~27-30 universities per year).
 •	China and South Korea have fewer ranked universities than expected given their educational investments.
 •	Countries like Turkey showed growth, while others like the U.S. exhibited fluctuations.
-Problem Statement 3: Is there a relationship between a country's population and the number of universities?
- 
+
+**Problem Statement 3: Is there a relationship between a country's population and the number of universities?**
+
+ ![image](https://github.com/user-attachments/assets/dd5b3edb-054e-43c5-b00a-c9710635f888)
+
 •	A weak positive correlation exists between population size and the number of ranked universities.
 •	The U.S. has a disproportionately high number of universities relative to its population, while China and India have fewer despite their large populations.
-Problem Statement 4: Are there any common criteria used by different ranking systems?
- 
+
+**Problem Statement 4: Are there any common criteria used by different ranking systems?**
+
+ ![image](https://github.com/user-attachments/assets/b726c72e-db35-499e-b996-a5a9635bb48a)
+
 •	Each ranking system applies distinct evaluation criteria.
 •	Some criteria appear similar (e.g., citations and publications), but no two ranking systems use the exact same evaluation approach.
-Problem Statement 5: What is the trend in university rankings over the years according to each system?
- 
+
+**Problem Statement 5: What is the trend in university rankings over the years according to each system?**
+
+ ![image](https://github.com/user-attachments/assets/122fe0f3-80cd-4655-9d4d-4ac1f312e02e)
+
 •	CWUR expanded significantly from 2012 to 2015 but has missing data in 2016.
 •	Shanghai Ranking remained relatively consistent with minor fluctuations.
 •	THE Ranking increased until 2015 but dropped in 2016.
-Problem Statement 6: How does the choice of ranking system affect a university's international student enrollment?
- 
+
+**Problem Statement 6: How does the choice of ranking system affect a university's international student enrollment?**
+
+ ![image](https://github.com/user-attachments/assets/3a589ffb-ee59-4300-95f1-5e3a412a8f2b)
+
 •	THE Ranking has the highest influence on international student enrollment.
 •	CWUR saw a huge increase in enrollment from 2013 to 2014.
 •	Shanghai Ranking remained stable with minor fluctuations.
-Problem Statement 7: Are there any criteria that have different weights in different ranking systems?
- 
+
+**Problem Statement 7: Are there any criteria that have different weights in different ranking systems?**
+
+ ![image](https://github.com/user-attachments/assets/c44ba6c0-46a4-4970-b4e7-dede497fa72e)
+
 •	No ranking system applies different weights to the same criteria; each has unique evaluation methodologies.
-Problem Statement 8: How have the weights of ranking criteria changed over time?
- 
+
+**Problem Statement 8: How have the weights of ranking criteria changed over time?**
+
+ ![image](https://github.com/user-attachments/assets/11d8a357-aa6f-4e77-838b-3468b4d348de)
+
 •	Shanghai Ranking’s criteria were followed consistently by about 71 universities from 2005 to 2015, but none followed them in 2016.
 •	THE World University followed by an average of 180 universities from 2011 to 2016.
 •	CWUR saw a sudden spike in ranked universities from 2013 to 2015 but dropped in 2016.
-Problem Statement 9: Is there a relationship between a university's score and the student-staff ratio?
- 
+
+**Problem Statement 9: Is there a relationship between a university's score and the student-staff ratio?**
+
+ ![image](https://github.com/user-attachments/assets/a8f6f752-6c0e-4221-ae06-c2b672b094bf)
+
 •	A very weak positive correlation (0.063) suggests that student-staff ratio has minimal impact on ranking scores.
-Problem Statement 10: How does the number of female students differ among universities?
- 
+
+**Problem Statement 10: How does the number of female students differ among universities?**
+
+ ![image](https://github.com/user-attachments/assets/cd97dc91-e831-4734-afed-f971717c90f9)
+
 •	Universities in Finland and Austria have higher female enrollment (~65-67%).
 •	Universities in Japan, South Korea, and Norway have significantly lower female enrollment (<30%).
-Problem Statement 11: What is the distribution of universities across different countries?
- 
+
+****Problem Statement 11: What is the distribution of universities across different countries?**
+**
+ ![image](https://github.com/user-attachments/assets/f864082e-c83b-40e7-9081-1c98bb4e00af)
+
 •	The U.S. has the highest number of ranked universities (273), accounting for 22% of the total.
 •	China (96 universities) follows, reflecting its growing global academic influence.
 •	The top 10 countries account for 68% of all ranked universities, showing dominance in specific regions.
-Problem Statement 12: How has the ranking of universities changed over the years?
- 
+
+**Problem Statement 12: How has the ranking of universities changed over the years?**
+
+ ![image](https://github.com/user-attachments/assets/21bbac4e-7d22-474f-ba55-982fa85966f8)
+
 •	From 2005 to 2010, only the Shanghai Ranking was used.
 •	THE Ranking emerged in 2011, covering 245 universities across 30 countries.
 •	CWUR followed in 2012, with 1024 universities ranked across 59 countries.
-Problem Statement 13: What is the trend in the percentage of female students over time?
- 
-•	Female student representation remained stable (~45%) between 2011 and 2016, with minor fluctuations.
-Problem Statement 14: How has the ranking score of universities evolved over the years?
- 
+
+****Problem Statement 13: What is the trend in the percentage of female students over time?**
+**
+ ![image](https://github.com/user-attachments/assets/1cd69b3d-36f0-4324-9e7a-a1cc241d41c9)
+
+This indicates a very weak positive correlation, meaning that as the student-staff ratio increases, the ranking score slightly increases, but the relationship is not strong.
+The weak correlation suggests that student-staff ratio alone does not significantly impact ranking score. Other factors likely play a more substantial role.
+Diverse University Models: Some universities may have a high student-staff ratio but still maintain high ranking scores due to other quality metrics like research output, funding, or reputation.
+
+
+**Problem Statement 14: How has the ranking score of universities evolved over the years?**
+
+ ![image](https://github.com/user-attachments/assets/e4f9d49b-68c9-467a-8679-79750ba33eba)
+
 •	CWUR scores increased sharply from 2011 to 2014 before stabilizing.
 •	Shanghai Ranking remained relatively stable with minor variations.
 •	THE Ranking showed more volatility, peaking in 2015 before dropping in 2016.
-Problem Statement 15: Is there a relationship between a university's ranking score and the number of students over time?
- 
+
+**Problem Statement 15: Is there a relationship between a university's ranking score and the number of students over time?
+**
+ ![image](https://github.com/user-attachments/assets/b02cc0b3-17cf-42b2-a6c3-95eb89d68027)
+
 •	A weak negative correlation (-0.11718) suggests that an increase in student population slightly correlates with a lower ranking score.
 
-UNIVERSITY SUCCESS ANALYSIS DASHBOARDS
-COUNTRY ANALYSIS
+**UNIVERSITY SUCCESS ANALYSIS DASHBOARDS
+COUNTRY ANALYSIS**
+
+ ![image](https://github.com/user-attachments/assets/4ff4195e-61ba-4e66-b79f-a02a1ba9b0ea)
+
+
+**UNIVERSITY ANALYSIS**
+![image](https://github.com/user-attachments/assets/3e76e8c4-a707-4f62-9afc-cda8963cc138)
+
+
+ **RANKING ANALYSIS**
+![image](https://github.com/user-attachments/assets/a9bab652-b5ab-4146-8314-bb99d48874b7)
 
  
-
-UNIVERSITY ANALYSIS
-
- 
-
-
-RANKING ANALYSIS
+**YEAR ANALYSIS:**
+![image](https://github.com/user-attachments/assets/4e6aa134-b9da-40fc-9692-a7c108fcb0f8)
 
  
+**Key Highlights:**
 
-YEAR ANALYSIS:
-
- 
-Key Highlights:
 •	Developed interactive Power BI dashboards for year-wise, university, country, and ranking analysis, providing stakeholders with a comprehensive overview of higher education metrics.
 •	Utilized SQL queries to extract and analyze data on university rankings, criteria weights, and demographic trends, offering valuable insights into the factors influencing academic performance.
 •	Applied Excel-based charts and visualizations to illustrate relationships between ranking scores, student demographics, and institutional success, supporting data-driven decision-making in academia.
 •	Conducted exploratory data analysis (EDA) to examine correlations between a country’s GDP, population, and university distribution, along with evolving trends in ranking scores and evaluation criteria over time.
 •	The project ultimately seeks to equip higher education stakeholders with actionable insights to enhance institutional performance, inform strategic initiatives, and promote academic excellence.
-
 
